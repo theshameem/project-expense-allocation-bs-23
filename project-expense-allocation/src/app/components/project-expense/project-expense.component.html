@@ -1,1 +1,42 @@
-<p>project-expense works!</p>
+<div class="project-expense" fxLayout="row" fxLayoutGap="24px">
+  <header>
+    <button mat-raised-button (click)="resetCalculation()">Reset</button>
+  </header>
+  <section class="project-section">
+    <div class="project-calculation">
+      <h1>Project cost calculation</h1>
+      <div class="add-btn">
+        <button (click)="addProjectManager()">+PM</button>
+        <button (click)="addDeveloper()">+Developer</button>
+        <button (click)="addQualityAssurance()">+QA</button>
+      </div>
+      <div class="total-cost">
+        <h1>Total cost: {{ totalCost }}</h1>
+        <p>Project manager: 300</p>
+        <p>Developer: 1000</p>
+        <p>Quality assurance: 500</p>
+      </div>
+    </div>
+
+    <!-- <div class="hierarchy-view" *ngFor="let employee of employees; index as i">
+      <h2>{{ employee.Name }}</h2>
+      <div class="add-btn" *ngIf="employee.Name == 'PM'">
+        <button (click)="addProjectManager(i)">+PM</button>
+        <button (click)="addDeveloper(i)">+Developer</button>
+        <button (click)="addQualityAssurance(i)">+QA</button>
+      </div>
+    </div> -->
+
+    <div class="hierarchy-view" *ngFor="let employee of employees; index as i">
+      <h2>{{ employee.Name }}</h2>
+      <div class="add-btn" *ngIf="employee.Name == 'PM'">
+        <button (click)="addProjectManager(i)">+PM</button>
+        <button (click)="addDeveloper(i)">+Developer</button>
+        <button (click)="addQualityAssurance(i)">+QA</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>All rights reserved</p>
+  </footer>
+</div>

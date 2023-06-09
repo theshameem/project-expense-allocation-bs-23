@@ -1,0 +1,68 @@
+.project-expense {
+  header {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    height: 60px;
+    background-color: grey;
+
+    button {
+      margin-right: 24px;
+    }
+  }
+
+  footer {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    position: center;
+    align-items: center;
+    align-content: center;
+    height: 60px;
+    background-color: grey;
+  }
+
+  .project-section {
+    overflow: auto;
+    height: calc(100vh - 200px);
+    // overscroll-behavior: contain;
+
+    .project-calculation {
+      padding: 24px;
+      display: flex;
+      flex-direction: row;
+      background-color: yellow;
+      align-items: center;
+      place-content: space-between;
+
+      // .add-btn {
+      //   display: flex;
+      //   gap: 8px;
+      // }
+
+      .total-cost {
+        display: flex;
+        flex-direction: column;
+
+        h1,
+        p {
+          margin: unset;
+        }
+      }
+    }
+
+    .hierarchy-view {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .add-btn {
+    display: flex;
+    gap: 8px;
+  }
+}
